@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Boggle</title>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<style>
+div#words {
+  min-width: 100px;
+  min-height: 100px;
+}
+</style>
+</head>
+
+<body>
+<textarea id="input"
+rows="4" cols="20" placeholder="type 16 characters here"></textarea>
+<p>
+<button id="solve">Solve</button>
+<p>
+<div id="words"></div>
+
+<script>
+$(function onLoad() {
+  $('#solve').on('click', function () {
+    var letters = $('#input').val();
+    console.log('letters', letters);
+
+    $('#words').text('results');
+  });
+});
+</script>
+
+</body>
+</html>

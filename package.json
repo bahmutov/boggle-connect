@@ -1,0 +1,19 @@
+{
+  "name": "boggle-connect",
+  "version": "0.0.0",
+  "description": "Boggle web page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "",
+  "keywords": [
+    "boggle",
+    "connect"
+  ],
+  "author": "Gleb Bahmutov <gleb.bahmutov@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "connect": "~2.8.5"
+  }
+}
