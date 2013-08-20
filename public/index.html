@@ -21,11 +21,21 @@ rows="4" cols="20" placeholder="type 16 characters here"></textarea>
 
 <script>
 $(function onLoad() {
+  function onSolved(words) {
+    console.log('words', words);
+    $('#words').text(words);
+  }
+
+  function onError(err) {
+    console.error(err);
+  }
+
   $('#solve').on('click', function () {
     var letters = $('#input').val();
     console.log('letters', letters);
 
-    $('#words').text('results');
+    $.get('/boggle?letters=' + letters,
+      onSolved, onError);
   });
 });
 </script>
