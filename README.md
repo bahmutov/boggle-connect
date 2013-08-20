@@ -14,3 +14,7 @@ Requires nodejs
 
 Then open a modern browser and navigate to the server, usually
 at [http://localhost:3000/](http://localhost:3000/)
+
+## Dependencies
+
+The web server is a [connect](https://github.com/senchalabs/connect) server with actual Boggle solver through [boggle](https://npmjs.org/package/boggle).
