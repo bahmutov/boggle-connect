@@ -14,4 +14,8 @@ var app = connect()
   .use(boggleMiddleware);
 
 http.createServer(app).listen(port);
+
 console.log('listening to port', port);
+var message = 'to test from command line, run\n' +
+  'curl localhost:' + port + '/boggle?letters=aaaabbbbccccdddd';
+console.log(message);
