@@ -4,7 +4,8 @@
   "main": "index.js",
   "version": "0.0.0-semantic-release",
   "scripts": {
-    "test": "eslint index.js src/*.js",
+    "lint": "eslint index.js src/*.js",
+    "test": "mocha src/*-spec.js",
     "commit": "git add . ; ./node_modules/pre-git/node_modules/commitizen/bin/git-cz",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
@@ -27,6 +28,7 @@
     "pre-git": {
       "commit-msg": "validate-commit-msg",
       "pre-commit": [
+        "npm run lint",
         "npm test",
         "npm version"
       ],
@@ -40,6 +42,7 @@
   },
   "devDependencies": {
     "eslint": "1.9.0",
+    "mocha": "2.3.3",
     "pre-git": "1.2.1",
     "semantic-release": "^4.3.5"
   }
