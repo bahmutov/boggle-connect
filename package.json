@@ -1,15 +1,16 @@
 {
   "name": "boggle-connect",
-  "version": "0.1.0",
   "description": "Boggle web page",
   "main": "index.js",
+  "version": "0.0.0-semantic-release",
   "scripts": {
     "test": "eslint index.js",
-    "commit": "git add . ; ./node_modules/pre-git/node_modules/commitizen/bin/git-cz"
+    "commit": "git add . ; ./node_modules/pre-git/node_modules/commitizen/bin/git-cz",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/bahmutov/boggle-connect.git"
+    "url": "https://github.com/bahmutov/boggle-connect.git"
   },
   "homepage": "https://github.com/bahmutov/boggle-connect",
   "keywords": [
@@ -39,6 +40,7 @@
   },
   "devDependencies": {
     "eslint": "1.9.0",
-    "pre-git": "1.2.1"
+    "pre-git": "1.2.1",
+    "semantic-release": "^4.3.5"
   }
 }
