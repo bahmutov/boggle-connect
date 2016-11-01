@@ -6,7 +6,6 @@
   "scripts": {
     "lint": "eslint index.js src/*.js",
     "test": "mocha src/*-spec.js",
-    "commit": "git add . ; ./node_modules/pre-git/node_modules/commitizen/bin/git-cz",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
@@ -26,7 +25,7 @@
   },
   "config": {
     "pre-git": {
-      "commit-msg": "validate-commit-msg",
+      "commit-msg": "simple",
       "pre-commit": [
         "npm run lint",
         "npm test",
@@ -37,13 +36,10 @@
       "post-merge": []
     }
   },
-  "czConfig": {
-    "path": "node_modules/pre-git/node_modules/cz-conventional-changelog"
-  },
   "devDependencies": {
     "eslint": "1.9.0",
     "mocha": "2.3.3",
-    "pre-git": "1.2.1",
+    "pre-git": "3.10.0",
     "semantic-release": "^4.3.5"
   }
 }
